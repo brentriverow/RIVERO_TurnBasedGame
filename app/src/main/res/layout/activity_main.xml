@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textHeroName"
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="56dp"
+        android:text="My Hero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.451" />
+
+    <TextView
+        android:id="@+id/textHeroHP"
+        android:layout_width="72dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="72dp"
+        android:text="Hero HP"
+        app:layout_constraintStart_toStartOf="@+id/textHeroName"
+        app:layout_constraintTop_toBottomOf="@+id/textHeroName" />
+
+    <TextView
+        android:id="@+id/textHeroMP"
+        android:layout_width="72dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="28dp"
+        android:text="Hero MP"
+        app:layout_constraintStart_toStartOf="@+id/textHeroHP"
+        app:layout_constraintTop_toBottomOf="@+id/textHeroHP" />
+
+    <TextView
+        android:id="@+id/textMonsName"
+        android:layout_width="67dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="56dp"
+        android:text="Monster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textHeroName" />
+
+    <TextView
+        android:id="@+id/textMonsMP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="Monster MP"
+        app:layout_constraintEnd_toEndOf="@+id/textMonsHP"
+        app:layout_constraintTop_toBottomOf="@+id/textMonsName" />
+
+    <TextView
+        android:id="@+id/textMonsHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Monster HP"
+        app:layout_constraintEnd_toEndOf="@+id/textMonsName"
+        app:layout_constraintTop_toBottomOf="@+id/textMonsName" />
+
+    <Button
+        android:id="@+id/btnNextTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Turn"
+        app:layout_constraintEnd_toStartOf="@+id/textMonsName"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toEndOf="@+id/textHeroName"
+        app:layout_constraintTop_toTopOf="@+id/textHeroName" />
+
+    <TextView
+        android:id="@+id/textHeroDPS"
+        android:layout_width="109dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:text="Hero Damage"
+        app:layout_constraintStart_toStartOf="@+id/textHeroName"
+        app:layout_constraintTop_toBottomOf="@+id/textHeroName" />
+
+    <TextView
+        android:id="@+id/textMonsDPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Monster Damage"
+        app:layout_constraintEnd_toEndOf="@+id/textMonsName"
+        app:layout_constraintTop_toBottomOf="@+id/textMonsName" />
+
+    <TextView
+        android:id="@+id/textCombatLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="Combat Log"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnskill1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:text="buttonskill1"
+        app:layout_constraintEnd_toStartOf="@+id/btnskill2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnskill3"
+        app:layout_constraintTop_toTopOf="@+id/btnskill3"
+        app:srcCompat="@drawable/skill_icon2" />
+
+    <ImageButton
+        android:id="@+id/btnskill2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:text="buttonskill2"
+        app:layout_constraintEnd_toStartOf="@+id/btnskill4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnskill1"
+        app:layout_constraintTop_toTopOf="@+id/btnskill1"
+        app:srcCompat="@drawable/burning_army_icon" />
+
+    <ImageButton
+        android:id="@+id/btnskill3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="36dp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:text="buttonskill3"
+        app:layout_constraintEnd_toStartOf="@+id/btnskill1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/textHeroHP"
+        app:layout_constraintTop_toBottomOf="@+id/btnNextTurn"
+        app:srcCompat="@drawable/skill_icon3" />
+
+    <ImageButton
+        android:id="@+id/btnskill4"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:text="buttonskill4"
+        app:layout_constraintEnd_toStartOf="@+id/textMonsMP"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnskill2"
+        app:layout_constraintTop_toTopOf="@+id/btnskill2"
+        app:srcCompat="@drawable/skill_icon4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
